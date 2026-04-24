@@ -1,0 +1,73 @@
+
+#home-header01 {
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+#home-header01-head {
+    display: ruby;
+}
+
+#home-header01-desc {
+    margin: 0.5em 0;
+    /* margin: 0.2em 0; */
+}
+
+.home-section {
+    height: 14em;
+    border-radius: .5em;
+    background-color: black;
+    padding: 1em;
+    background-size: cover;
+    background-position: left top;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: .85em;
+}
+
+.home-section-head * {
+    text-align: end;
+    overflow: clip visible;
+    text-overflow: clip;
+}
+
+.home-section-head h2 {
+    font-size: 2em;
+}
+
+.home-section-desc {
+    max-width: 80%;
+}
+
+#home-section01 {
+    height: 20em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../images/bladerunner2049lede.webp");
+}
+
+#home-section02 {
+    background-position-y: 45%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../images/IMG_20260418_172926.webp");
+}
+
+#home-section03 {
+    background-position-y: 79%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../images/AGC_20260211_180847349.webp");
+}
+
+#home-section04 {
+    background-position-y: 49%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../images/DSC_20260223_192604943.webp");
+}
+
+#home-section05 {
+    background-position-y: 49%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../images/DSC_20251120_152405743.webp");
+}
+
+#home-section06 {
+    background-position-y: 49%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../images/20260425_010320.webp");
+}
+

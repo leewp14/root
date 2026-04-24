@@ -1,0 +1,101 @@
+
+@import url("normalize.css");
+@import url("common.css");
+
+:root {
+    --var-root-color: #e6e6e6;
+    --var-root-background-color: #131313;
+    --var-root-max-width: 1080px;
+    --var-status-ready-color: var(--var-root-color);
+    --var-status-busy-color: #3705e8;
+    --var-status-error-color: #e80505;
+    --var-status-color: var(--var-status-busy-color);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(93 93 93) transparent;
+}
+
+::selection {
+    background-color: white;
+    color: black;
+}
+
+/* https://www.bennadel.com/blog/4536-creating-a-marquee-effect-with-css-animations.htm */
+@keyframes marquee-content {
+	/* Element one fully ON screen at left-edge of container. */
+	from {
+		transform: translateX( 115% );
+	}
+	/* Element one fully OFF screen (just beyond left-ledge of container). */
+	to {
+		transform: translateX( -115% );
+	}
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+body {
+    color: var(--var-root-color);
+    background-color: #090909;
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    height: calc(100% - 2.5em);
+    overflow-y: scroll;
+    padding-right: 1em;
+    margin-right: -1em;
+}
+
+footer {
+    text-align: center;
+    opacity: .7;
+    margin-bottom: -.7em;
+    line-height: 1;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@media (max-width: 479px) {
+    footer > tt {
+        display: block;
+        animation: 15s marquee-content linear infinite;
+    }
+}
+
+#root-div {
+    background-color: var(--var-root-background-color);
+    height: calc(100% - 10em);
+    width: calc(100% - 10em);
+    border: 1px solid var(--var-root-color);
+    box-shadow: .5em .5em var(--var-status-color);
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#root-div-header {
+    padding-bottom: 1em;
+}
+
+@media (max-width: 1023px) {
+    #root-div {
+        height: calc(100% - 4em);
+        width: calc(100% - 4em);
+    }
+}
